@@ -1,0 +1,8 @@
+ASYNCIO_CLIENT_CONFIG:
+  ASYNC_BACKOFF_FACTOR: 1
+  ASYNC_RETRY_COUNT: 2
+  ASYNC_TCP_LIMIT: 25
+  ASYNC_TIMEOUT: 
+    total: None       # if `None` wait for unlimited time or `sock_connect` and `sock_read`
+    sock_connect: 5   # How long to wait before an open socket allowed to connect
+    sock_read: 5      # How long to wait with no data being read before timing out

@@ -1,0 +1,30 @@
+version: 1
+
+formatters:
+  simple_formatter:
+    format: "%(asctime)s; %(levelname)s; %(name)s; %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+  extended_formatter:
+    format: "%(asctime)s; %(levelname)s; %(name)s; %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+
+filters:
+  no_console_filter:
+    ():
+
+handlers:
+  console_handler:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: simple_formatter
+    filters: [no_console_filter]
+
+  file_handler:
+    class: logging.FileHandler
+    level: INFO
+    filename: logs/logs.log
+    formatter: extended_formatter
+
+root:
+  handlers: [console_handler, file_handler]
+  propagate: true

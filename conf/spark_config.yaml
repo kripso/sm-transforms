@@ -1,0 +1,86 @@
+DEFAULT_SPARK_CONF: 
+  -  ["spark.cores.max", "12"]
+  -  ["spark.driver.cores", "8"]
+  -  ["spark.driver.memory", "32g"]
+  -  ["spark.driver.memoryOverhead", "16"]
+  -  ["spark.executor.memoryOverhead", "3"]
+  -  ["spark.executor.instances", "2"]
+  -  ["spark.executor.memory", "4g"]
+  -  ["spark.executor.cores", "2"]
+  -  ["spark.ui.port", "4050"]
+  -  ["spark.driver.bindAddress", "localhost"]
+  -  ["spark.driver.host", "localhost"]
+  -  ["spark.sql.shuffle.partitions", "100"]
+  -  ["spark.eventLog.enabled", "true"]
+
+ENABLE_EVENTLOG:
+  - ["spark.eventLog.enabled", "true"]
+DISABLE_EVENTLOG:
+  - ["spark.eventLog.enabled", "false"]
+SHUFFLE_PARTITIONS_SIZE:
+  -  ["spark.sql.shuffle.partitions", "100"]
+
+DRIVER_MEMORY_OVERHEAD_SMALL:
+  -  ["spark.driver.memoryOverhead", "2"]
+DRIVER_MEMORY_OVERHEAD_MEDIUM:
+  -  ["spark.driver.memoryOverhead", "4"]
+DRIVER_MEMORY_OVERHEAD_LARGE:
+  -  ["spark.driver.memoryOverhead", "8"]
+
+DRIVER_MEMORY_SMALL:
+  -  ["spark.driver.memory", "2"]
+DRIVER_MEMORY_MEDIUM:
+  -  ["spark.driver.memory", "4"]
+DRIVER_MEMORY_LARGE:
+  -  ["spark.driver.memory", "8"]
+
+DRIVER_CORES_SMALL:
+  -  ["spark.driver.cores", "2"]
+DRIVER_CORES_MEDIUM:
+  -  ["spark.driver.cores", "4"]
+DRIVER_CORES_LARGE:
+  -  ["spark.driver.cores", "8"]
+
+EXECUTOR_MEMORY_OVERHEAD_SMALL:
+  -  ["spark.driver.memoryOverhead", "2"]
+EXECUTOR_MEMORY_OVERHEAD_MEDIUM:
+  -  ["spark.driver.memoryOverhead", "4"]
+EXECUTOR_MEMORY_OVERHEAD_LARGE:
+  -  ["spark.driver.memoryOverhead", "8"]
+
+EXECUTOR_MEMORY_EXTRA_SMALL:
+  -  ["spark.executor.memory", "1"]
+EXECUTOR_MEMORY_SMALL:
+  -  ["spark.executor.memory", "2"]
+EXECUTOR_MEMORY_MEDIUM:
+  -  ["spark.executor.memory", "4"]
+EXECUTOR_MEMORY_LARGE:
+  -  ["spark.executor.memory", "6"]
+
+EXECUTOR_CORES_EXTRA_SMALL:
+  -  ["spark.executor.cores", "1"]
+EXECUTOR_CORES_SMALL:
+  -  ["spark.executor.cores", "2"]
+EXECUTOR_CORES_MEDIUM:
+  -  ["spark.executor.cores", "4"]
+EXECUTOR_CORES_LARGE:
+  -  ["spark.executor.cores", "6"]
+
+NUM_OF_EXECUTORS_2:
+  -  ["spark.executor.instances", "2"]
+NUM_OF_EXECUTORS_4:
+  -  ["spark.executor.instances", "4"]
+NUM_OF_EXECUTORS_6:
+  -  ["spark.executor.instances", "6"]
+NUM_OF_EXECUTORS_8:
+  -  ["spark.executor.instances", "8"]
+NUM_OF_EXECUTORS_10:
+  -  ["spark.executor.instances", "10"]
+NUM_OF_EXECUTORS_12:
+  -  ["spark.executor.instances", "12"]
+NUM_OF_EXECUTORS_14:
+  -  ["spark.executor.instances", "14"]
+NUM_OF_EXECUTORS_16:
+  -  ["spark.executor.instances", "16"]
+NUM_OF_EXECUTORS_32:
+  -  ["spark.executor.instances", "32"]
