@@ -27,7 +27,7 @@ schema = T.StructType([
 @F.udf(returnType=T.ArrayType(T.MapType(T.StringType(), T.StringType())))
 def parse_json_string(json_string: str) -> any:
     results = []
-    
+
     if json_string is not None:
         s = re.search(r'mentions=\[([^]]+)]', json_string)
         if s is None:
@@ -135,7 +135,7 @@ def compute(ctx, out_: Output, in_df: Input):
         .limit(100)
     )
     out_.write_to_html(df_mentions_counts, 'in_mentions_count')
-    
+
     df = (
         df
         .groupBy('text_word')

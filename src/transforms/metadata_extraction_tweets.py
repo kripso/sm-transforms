@@ -23,12 +23,12 @@ def parse_json_string(json_string: str) -> any:
     results = []
 
     if json_string is not None:
-        s = re.search(r'mentions=\[([^]]+)]', json_string)
-        if s == None:
+        string_ = re.search(r"mentions=\[([^]]+)]", json_string)
+        if string_ is not None:
             return f'{results}'
 
-        s = [re.sub(r'(\w+)', r'"\g<1>"', item.replace('=', ':')) for item in s[1].replace(' ', '').split('},{')]
-        for item in s:
+        string_ = [re.sub(r'(\w+)', r'"\g<1>"', item.replace('=', ':')) for item in s[1].replace(' ', '').split('},{')]
+        for item in string_:
             if item[0] != '{':
                 item = '{' + item
             if item[-1] != '}':
