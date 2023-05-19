@@ -25,5 +25,6 @@ logger = SparkLogger("metadata_extraction_tweets")
 def compute(ctx, out_: Output, in_mentions: Input, in__mentions_count: Input):
     in_df = in_mentions.read_df()
     out_.write_to_html(in_df, 'in_mentions')
+
     in_df = in__mentions_count.read_df()
     out_.write_to_html(in_df, 'in_mentions_count')

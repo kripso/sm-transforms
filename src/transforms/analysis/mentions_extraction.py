@@ -69,7 +69,7 @@ def compute(ctx, out_mentions_count: Output, out_mentions: Output, in_: Input):
         )
         .orderBy('mentioned_count', ascending=False)
     )
-    # out_mentions.write_df(df_mentions)
+    out_mentions.write_df(df_mentions)
     df_mentions.show()
 
     df_mentions_counts = (
@@ -83,6 +83,5 @@ def compute(ctx, out_mentions_count: Output, out_mentions: Output, in_: Input):
         )
         .orderBy('mentioned_count', ascending=False)
     )
-    # out_mentions_count.write_df(df_mentions_counts)
+    out_mentions_count.write_df(df_mentions_counts)
     df_mentions_counts.show()
-    # df.show()

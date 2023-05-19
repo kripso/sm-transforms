@@ -63,7 +63,7 @@ def simple_data_fix(path: str):
 
 @configure()
 @transform_df(
-    Output("/data/twitter/sm-scraps-data/datasets/clean/targets.simple", build_datetime=False),
+    Output("/data/twitter/sm-scraps-data/datasets/clean/targets", build_datetime=False),
 )
 def compute(spark):
 
