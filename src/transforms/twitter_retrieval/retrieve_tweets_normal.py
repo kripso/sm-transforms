@@ -17,6 +17,7 @@ RETRY_ERRORS = [400, 429, 443, 444, 500, 599]
 
 logger = SparkLogger("Retrieve_Tweets")
 
+# TODO: change entities into proper type
 SCHEMA = T.StructType(
     [
         T.StructField("user_name", T.StringType()),
@@ -68,7 +69,7 @@ SCHEMA = T.StructType(
                 )
             ),
         ),
-        T.StructField("entities", T.StringType()),
+        T.StructField("entities", T.StringType()), 
     ]
 )
 
