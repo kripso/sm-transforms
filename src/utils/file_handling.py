@@ -10,18 +10,18 @@ import os
 LOGGER = SparkLogger("file_handling")
 
 
-def dataframe_to_html(df: DataFrame, name: str, path: str = '/data/twitter/sm-scraps-data/misc/html_outs', limit_rows: int = 100) -> None:
+def dataframe_to_html(df: DataFrame, name: str, path: str = './misc/html_outs', limit_rows: int = 100) -> None:
     html = df.limit(limit_rows).toPandas().to_html()
     file_path = os.path.join(check_directory(path), f'{name}.html',)
 
     with open(file_path, "w") as f:
         f.write(html)
 
-    print(f'https://vscode.kripso-world.com/proxy/5500/{file_path.replace("/data/twitter/sm-scraps-data/misc/", "")}')
+    print(f'https://vscode.kripso-world.com/proxy/5500/{file_path.replace("./misc/", "")}')
 
 
 def load_dictionary(name: str, keys: list):
-    with open(f"/data/twitter/sm-scraps-data/misc/dictionary/{name}.yaml") as f:
+    with open(f"./conf/dictionary/{name}.yaml") as f:
         data = yaml.safe_load(f)
     return {key: data.get(key, {}) for key in keys}
 

@@ -1,0 +1,65 @@
+prefixes:
+  - boy
+  - girl
+  - grand
+  - great-grand
+  - great grand
+  - step
+  - ex
+  - god
+
+relatives:
+  - friend
+  - aunt
+  - baby
+  - brother
+  - bride
+  - cousin
+  - dad
+  - daughter
+  - father
+  - father-in-law
+  - mother
+  - mother-in-law
+  - fiancé
+  - fiancée
+  - fiance
+  - fiancee
+  - ma
+  - pa
+  - pops
+  - mom
+  - mum
+  - groom
+  - husband
+  - mummy
+  - nephew
+  - niece
+  - parent
+  - sister
+  - son
+  - twin
+  - uncle
+  - wife
+
+general:
+  - bachelor
+  - child
+  - couple
+  - descendant
+  - foster
+  - child
+  - gentleman
+  - kid
+  - lady
+  - madam
+  - elder
+  - sister
+  - sir
+  - spinster
+  - to adopt
+  - to be divorced
+  - to bring up
+  - to raise
+  - wedding
+  - youth

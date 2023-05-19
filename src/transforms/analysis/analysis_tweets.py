@@ -147,7 +147,7 @@ def compute(ctx, out_: Output, in_df: Input):
     labes = [item[0] for item in pie_data]
 
     plt.pie(y, labels=labes)
-    plt.savefig('/data/twitter/sm-scraps-data/misc/figures/with_friend.png')
+    plt.savefig('./misc/figures/with_friend.png')
     plt.close()
 
     pie_data = [item for item in df.filter(F.col("text_word") != "friend").select("text_word", "count").head(10)]
@@ -155,5 +155,5 @@ def compute(ctx, out_: Output, in_df: Input):
     labes2 = [item[0] for item in pie_data]
 
     plt.pie(y, labels=labes2)
-    plt.savefig('/data/twitter/sm-scraps-data/misc/figures/without_friend.png')
+    plt.savefig('./misc/figures/without_friend.png')
     plt.close()
